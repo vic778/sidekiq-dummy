@@ -1,5 +1,10 @@
 <div id="<%= dom_id post %>">
+
   <p>
+   The time is <%= Time.now %>
+    is it the time to publish? <strong> <%= Time.now >  post.publish_at %></strong>
+  <p>
+
     <strong>Title:</strong>
     <%= post.title %>
   </p>
@@ -20,8 +25,8 @@
   </p>
 
   <p>
-    <strong>Published at:</strong>
-    <%= post.published_at %>
+    <strong>Publish_at:</strong>
+    <%= post.publish_at %>
   </p>
 
 </div>
