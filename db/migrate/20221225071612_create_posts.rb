@@ -3,9 +3,9 @@ class CreatePosts < ActiveRecord::Migration[7.0]
     create_table :posts do |t|
       t.string :title
       t.text :body
-      t.boolean :published, default: false
-      t.boolean :schedule, default: false
-      t.datetime :published_at
+      t.boolean :published
+      t.boolean :schedule
+      t.datetime :publish_at
 
       t.timestamps
     end
