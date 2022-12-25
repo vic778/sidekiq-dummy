@@ -10,6 +10,11 @@ class PostsController < ApplicationController
   def show
   end
 
+  def published
+    @posts = Post.where(published: true)
+    render :index
+  end
+
   # GET /posts/new
   def new
     @post = Post.new
@@ -65,6 +70,6 @@ class PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:title, :body, :published, :schedule, :published_at)
+      params.require(:post).permit(:title, :body, :published, :schedule, :publish_at)
     end
 end
